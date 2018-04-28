@@ -1,0 +1,13 @@
+{
+    "host": "smtp.xxx.com",
+    "port": "25",
+    "user": "xxx@mail.com",
+    "password": "",
+    "to": [
+        "receive@mail.com"
+    ],
+    "info": {
+        "nickname": "raspberrypi",
+        "subject": "树莓派开机上报IP"
+    }
+}   
