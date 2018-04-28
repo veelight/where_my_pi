@@ -5,7 +5,7 @@
 ### Install
 
 ```
-go get github.com/coolmaiev/where_my_pi
+go clone https://github.com/coolmaiev/where_my_pi.git
 go build
 ```
 config.json文件配置好smtp服务器即可
