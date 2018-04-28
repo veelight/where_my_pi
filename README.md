@@ -8,4 +8,4 @@
 go get github.com/coolmaiev/where_my_pi
 go build
 ```
-
+config.json文件配置好smtp服务器即可
