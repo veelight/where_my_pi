@@ -7,6 +7,9 @@ import (
 	"log"
 	"net"
 	"net/smtp"
+	"os"
+	"os/exec"
+	"path/filepath"
 	"strings"
 )
 
@@ -45,9 +48,12 @@ func main() {
 }
 
 func getConfig() ([]byte, error) {
-	b, err := ioutil.ReadFile("config.json")
+	file, _ := exec.LookPath(os.Args[0])
+	path, _ := filepath.Abs(file)
+	dir := filepath.Dir(path)
+	b, err := ioutil.ReadFile(dir + "/config.json")
 	if err != nil {
-		log.Fatalln(err)
+		return nil, err
 	}
 	return b, err
 }
